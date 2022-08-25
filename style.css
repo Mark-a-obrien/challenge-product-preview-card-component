@@ -1,0 +1,137 @@
+:root {
+    --font-sz-para : 14px;
+    --color-greyish-blue : hsl(228, 12%, 48%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+
+body {
+    height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    display: flex;
+    width: 580px;
+    height: 434px;
+}
+
+
+.image {
+    background-image: url("images/image-product-desktop.jpg");
+    width: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 10px 0 0 10px;
+}
+
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    padding: 2rem;
+    width: 50%;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0 10px 10px 0;
+}
+
+.text .perfume {
+    font-size: 12px;
+    font-family: 'Montserrat';
+    color: var(--color-greyish-blue);
+    letter-spacing: 4px;
+}
+
+.text .header {
+    font-size: 2rem;
+    color: hsl(212, 21%, 14%);
+    font-family: 'Fraunces', serif;
+    line-height: 2rem;
+    
+}
+
+.text .paragraph {
+    color: var(--color-greyish-blue);
+    font-size: var(--font-sz-para);
+    font-family: 'Montserrat';
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 10px;
+}
+
+.prices .discount-price {
+    color: #3c8168;
+    font-size: 2rem;
+    font-family: 'Fraunces', serif;
+}
+
+.prices .original-price {
+    font-size: var(--font-sz-para);
+    text-decoration: line-through;
+    font-family: 'Montserrat';
+    color: var(--color-greyish-blue);
+}
+
+
+
+.add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    padding: .6rem;
+    font-size: var(--font-sz-para);
+    color: hsl(0, 0%, 100%);
+    background-color: #3c8168;
+    font-family: 'Montserrat';
+    cursor: pointer;
+    height: 50px;
+}
+
+.add:hover {
+    opacity: 0.8;
+}
+
+
+@media only screen and (max-width: 376px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        height: 680px;
+        margin: 1rem;
+        margin-top: 100px;
+        margin-bottom: 2rem;
+    }
+
+    
+    .image {
+        width: 350px;
+        height: 246px;
+        background-image: url("images/image-product-mobile.jpg");
+        border-radius: 10px 10px 0 0 ;
+        background-size: contain;
+    }
+
+    .text {
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+        gap: 1rem;
+        padding: 1.8rem;
+    }
+}
+
